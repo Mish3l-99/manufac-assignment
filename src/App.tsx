@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Charts from "./components/Charts";
+
+import Data from "./data/Wine-Data.json";
 
 function App() {
+  const data = JSON.parse(JSON.stringify(Data));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="box">Assignment: Typescript Developer job</div>
+
+      <Charts data={data} />
+
+      <div className="footer">By: Meshaal Noureldien</div>
     </div>
   );
 }
